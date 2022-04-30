@@ -14,13 +14,22 @@ class MyApp extends StatelessWidget {
           child: child!,
         );
       },
-      home: Scaffold(
-        appBar: AppBar(
-          title: const Text('App Bar'),
-        ),
-        body: const Center(
-          child: Text('Text'),
-        ),
+      home: const MainPage(),
+    );
+  }
+}
+
+class MainPage extends StatelessWidget {
+  const MainPage({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('App Bar'),
+      ),
+      body: const Center(
+        child: Text('Text'),
       ),
     );
   }
